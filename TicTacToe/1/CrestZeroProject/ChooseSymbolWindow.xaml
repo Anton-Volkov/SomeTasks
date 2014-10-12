@@ -1,0 +1,12 @@
+﻿<Window x:Class="CrestZeroProject.ChooseSymbolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Выбор метки игры" Height="151" Width="183" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <RadioButton x:Name="rbX" Content="X" HorizontalAlignment="Left" Margin="36,46,0,0" VerticalAlignment="Top" Checked="rbX_Checked" GroupName="SymbolGroup"/>
+        <RadioButton x:Name="rbO" Content="O" HorizontalAlignment="Left" Margin="36,67,0,0" VerticalAlignment="Top" Checked="rbX_Checked" GroupName="SymbolGroup"/>
+        <Label Content="Сделайте ваш выбор" HorizontalAlignment="Left" Margin="27,5,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="99,36,0,0" VerticalAlignment="Top" Width="53" MouseDown="Image_MouseDown_1"/>
+
+    </Grid>
+</Window>
