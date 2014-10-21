@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace BaseInterfaceTask
 {
-    class Student : IComparable
+    class Student : IComparable // класс студент, реализует интерфейс IComparable
     {
-        int age;
-        string name;
-        string surname;
-        List<int[]> marks;
-        public Student(int age, string name, string surname)
+        int age; // возраст
+        string name; // имя
+        string surname; // фамилия 
+        List<int[]> marks; // список с массивами оценок по предметам
+        public Student(int age, string name, string surname) 
         {
             if (age > 0)
                 this.age = age;
@@ -51,7 +51,7 @@ namespace BaseInterfaceTask
                 Console.WriteLine();
             }
         }
-        public double ArithmeticAverage() // среднее арифметическое
+        public double ArithmeticAverage() // средний бал по всем предметам
         {
             double d = 0;
             for (int x = 0; x < marks.Count; x++)

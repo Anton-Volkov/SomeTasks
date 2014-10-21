@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace BaseInterfaceTask
 {
 
-    class Group : IEnumerable
+    class Group : IEnumerable // класс группа, реализует интерфейс IEnumerable
     {
         public Group(int number)
         {
@@ -16,13 +16,13 @@ namespace BaseInterfaceTask
             group = new Student[number];
             n = 0;
         }
-        string Name { get; set; }
-        int Number { get; set; }
-        int n;
+        string Name { get; set; } // имя группы
+        int Number { get; set; } // максимальное число студентов в группе
+        int n; // текущее число студентов в группе
         public Student[] group;
         public void Add(Student newStudent) // метод добавления студента в группу
         {
-            if (n >= Number)
+            if (n >= Number) // если группа уже заполнена
             {
                 Console.WriteLine("Больше добавить нельзя.");
                 return;
@@ -31,7 +31,7 @@ namespace BaseInterfaceTask
             {
                 if (item == null)
                     break;
-                else if (item.CompareTo(newStudent) == 0)
+                else if (item.CompareTo(newStudent) == 0) // если такой студент уже есть.
                 {
                     Console.WriteLine("Такой студент уже есть в группе. У нас все оригинальные студенты.");
                     return;
@@ -40,7 +40,7 @@ namespace BaseInterfaceTask
             group[n] = newStudent;
             n++;
         }
-        public IEnumerator GetEnumerator()
+        public IEnumerator GetEnumerator() // метод GetEnumerator для перебора группы foreach
         {
             for (int i = 0; i < n; i++)
             {
